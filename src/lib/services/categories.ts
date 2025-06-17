@@ -26,7 +26,7 @@ export class CategoryService {
         return fallbackCategories
       }
 
-      return data || fallbackCategories
+      return (data as Category[]) || fallbackCategories
     } catch (error) {
       console.error("Error connecting to Supabase:", error)
       return fallbackCategories
