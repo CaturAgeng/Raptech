@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ShoppingCart } from "lucide-react";
-import { Button } from "../ui/Button";
+import { Button } from "@/components/ui/Button";
 
 export const Navbar = () => {
     return (
@@ -32,7 +32,7 @@ export const Navbar = () => {
                     </nav>
 
                     <div className="flex items-center space-x-4">
-                        <Button variant="ghost" size="icon">
+                        <Button variant="ghost" size="md">
                             <ShoppingCart className="h-5 w-5" />
                             <span className="sr-only"> Keranjang</span>
                         </Button>
