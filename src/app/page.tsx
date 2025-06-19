@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { Navbar } from "@/components/Navbar"
 import { ShoppingCart, Star, Zap, Shield, Truck } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -18,44 +19,7 @@ export default async function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-2">
-                <Zap className="h-8 w-8 text-red-600" />
-                <span className="text-xl font-bold text-gray-900">Raptech</span>
-              </Link>
-            </div>
-
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-900 hover:text-red-600 font-medium">
-                Beranda
-              </Link>
-              <Link href="/products" className="text-gray-500 hover:text-red-600">
-                Produk
-              </Link>
-              <Link href="/custom" className="text-gray-500 hover:text-red-600">
-                Kustomisasi
-              </Link>
-              <Link href="/about" className="text-gray-500 hover:text-red-600">
-                Tentang
-              </Link>
-              <Link href="/contact" className="text-gray-500 hover:text-red-600">
-                Kontak
-              </Link>
-            </nav>
-
-            <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="icon">
-                <ShoppingCart className="h-5 w-5" />
-                <span className="sr-only">Keranjang</span>
-              </Button>
-              <Button>Masuk</Button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Supabase Status */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
