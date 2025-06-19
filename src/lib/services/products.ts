@@ -152,7 +152,7 @@ export class ProductService {
         return fallbackProducts
       }
 
-      return data || fallbackProducts
+      return (data as Product[]) || fallbackProducts
     } catch (error) {
       console.error("Error connecting to Supabase:", error)
       return fallbackProducts
@@ -176,7 +176,7 @@ export class ProductService {
         return fallbackProducts.filter((product) => product.category === category)
       }
 
-      return data || []
+      return (data as Product[]) || []
     } catch (error) {
       console.error("Error connecting to Supabase:", error)
       return fallbackProducts.filter((product) => product.category === category)
@@ -196,7 +196,7 @@ export class ProductService {
         return fallbackProducts.find((product) => product.id === id) || null
       }
 
-      return data
+      return data as Product
     } catch (error) {
       console.error("Error connecting to Supabase:", error)
       return fallbackProducts.find((product) => product.id === id) || null
@@ -220,7 +220,7 @@ export class ProductService {
         return fallbackProducts.filter((product) => product.name.toLowerCase().includes(query.toLowerCase()))
       }
 
-      return data || []
+      return (data as Product[]) || []
     } catch (error) {
       console.error("Error connecting to Supabase:", error)
       return fallbackProducts.filter((product) => product.name.toLowerCase().includes(query.toLowerCase()))
@@ -245,7 +245,7 @@ export class ProductService {
         return fallbackProducts.filter((product) => product.price >= minPrice && product.price <= maxPrice)
       }
 
-      return data || []
+      return (data as Product[]) || []
     } catch (error) {
       console.error("Error connecting to Supabase:", error)
       return fallbackProducts.filter((product) => product.price >= minPrice && product.price <= maxPrice)
@@ -270,7 +270,7 @@ export class ProductService {
         return fallbackProducts.slice(0, limit)
       }
 
-      return data || fallbackProducts.slice(0, limit)
+      return (data as Product[]) || fallbackProducts.slice(0, limit)
     } catch (error) {
       console.error("Error connecting to Supabase:", error)
       return fallbackProducts.slice(0, limit)
