@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ProductService } from "@/lib/services/products"
 import { CategoryService } from "@/lib/services/categories"
-import { SupabaseStatus } from "@/components/supabase-status"
+// import { SupabaseStatus } from "@/components/supabase-status"
 
 export default async function HomePage() {
   // Fetch data from Supabase (or fallback data)
@@ -22,9 +22,9 @@ export default async function HomePage() {
       <Navbar />
 
       {/* Supabase Status */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <SupabaseStatus />
-      </div>
+      </div> */}
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-red-800 text-white">
