@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Star, ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw, Zap } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/Button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -137,7 +137,7 @@ export default function ProductDetailPage() {
 
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button
+                <Button
                   key={index}
                   onClick={() => setSelectedImage(index)}
                   className={`relative rounded-lg overflow-hidden ${
@@ -151,7 +151,7 @@ export default function ProductDetailPage() {
                     height={100}
                     className="w-full h-20 object-cover"
                   />
-                </button>
+                </Button>
               ))}
             </div>
           </div>
