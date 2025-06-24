@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Search, Grid, List, Star, ShoppingCart } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -227,13 +227,21 @@ export default function ProductsPage() {
                 <h3 className="font-semibold mb-4">Filter Lainnya</h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="customizable" checked={showCustomizable} onCheckedChange={setShowCustomizable} />
+                    <Checkbox
+                      id="customizable"
+                      checked={showCustomizable}
+                      onCheckedChange={(checked) => setShowCustomizable(checked === true)} // Added checked condition
+                    />
                     <label htmlFor="customizable" className="text-sm">
                       Dapat Dikustomisasi
                     </label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="instock" checked={showInStock} onCheckedChange={setShowInStock} />
+                    <Checkbox 
+                      id="instock" 
+                      checked={showInStock} 
+                      onCheckedChange={(checked) => setShowInStock(checked === true)} // Added checked condition
+                    />
                     <label htmlFor="instock" className="text-sm">
                       Tersedia
                     </label>
