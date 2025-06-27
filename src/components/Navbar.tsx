@@ -32,7 +32,7 @@ export const Navbar = () => {
                     </nav>
 
                     <div className="flex items-center space-x-4">
-                        <Button variant="ghost" size="md">
+                        <Button variant="ghost" size="lg" >
                             <ShoppingCart className="h-5 w-5" />
                             <span className="sr-only"> Keranjang</span>
                         </Button>
