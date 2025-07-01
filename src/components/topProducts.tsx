@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Progress } from "@/components/ui/progress"
 
 
 
@@ -21,9 +22,11 @@ export default function TopProducts() {
                 {products.map((product, index) => (
                     <div key={product.name} className="space-y-2">
                         <div className="flex items-center justify-between text-sm">
-                            <span></span>
-                            <span></span>
+                            <span className="font-medium">{product.name}</span>
+                            <span className="text-gray-500">{product.sales} sales</span>
                         </div>
+                        
+                        <Progress value={product.progress} className="h-2" />
                     </div>
                 ))}
             </CardContent>
