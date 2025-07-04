@@ -12,7 +12,7 @@ const product =[
         originalPrice: 18000000,
         rating: 4.5,
         reviews: 120,
-        image: "/images/laptop-gaming.jpg",
+        image: "/assets/pcb1.jpg",
         badge: "Best Seller",
     },
     {
@@ -22,7 +22,7 @@ const product =[
         originalPrice: 10000000,
         rating: 4.7,
         reviews: 200,
-        image: "/images/smartphone-custom.jpg",
+        image: "/assets/1.jpg",
         badge: "New Arrival",
     },
     {
@@ -32,7 +32,17 @@ const product =[
         originalPrice: 3000000,
         rating: 4.8,
         reviews: 150,
-        image: "/images/audio-headphones.jpg",
+        image: "/assets/2.jpg",
+        badge: "Featured",
+    },
+    {
+        id: 4,
+        name: "Audio Premium Headphones",
+        price: 2500000,
+        originalPrice: 3000000,
+        rating: 4.8,
+        reviews: 150,
+        image: "/assets/3.jpg",
         badge: "Featured",
     },
 ]
